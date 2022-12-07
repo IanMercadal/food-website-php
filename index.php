@@ -1,5 +1,7 @@
-
-<?php include './includes/header.php' ?>
+<?php 
+require './conexion.php';
+include_once './includes/header.php';
+?>
 
     <!-- home section starts -->
     <section class="home" id="home">
@@ -522,4 +524,4 @@
     </section>
     <!-- order section ends -->
 
-<?php include './includes/footer.php' ?>
+<?php include_once './includes/footer.php' ?>

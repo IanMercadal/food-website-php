@@ -1,4 +1,4 @@
-<?php include './includes/header.php' ?>
+<?php include_once './includes/header.php' ?>
 
     <div style="margin-top: 10px"></div>
     <!-- order section starts -->
@@ -41,4 +41,4 @@
     </section>
     <!-- order section ends -->
 
-<?php include './includes/footer.php' ?>
+<?php include_once './includes/footer.php' ?>

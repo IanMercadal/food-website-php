@@ -21,6 +21,9 @@ html {
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
+ul {
+    list-style:none;
+}
 
 /* HEADER */
 header {
@@ -201,7 +204,7 @@ header .icons #menu-bars {
 
 .dishes .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(31rem,1fr));
     gap: 1.5rem;
 }
 .dishes .box-container .box {
@@ -328,13 +331,13 @@ header .icons #menu-bars {
     grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
     gap: 1.5rem;
 }
-.menu .box-container .box {
+.menu .box-container .box, .bill {
     background: #fff;
     border: .1rem solid rgba(0,0,0,.2);
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
 }
-.menu .box-container .box .image {
+.menu .box-container .box .image, .bill .bill-image {
     height: 25rem;
     width: 100%;
     padding: 1.5rem;
@@ -527,23 +530,25 @@ header .icons #menu-bars {
     overflow: hidden;
 }
 .bill-image {
-    width: 200px;
+    max-width: 300px;
 }
 .user-profile {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 2rem;
 }
 #user-icon {
     font-size: 120px;
 }
 .profile-data {
     font-size: 2rem;
-    list-style:none;
 }
+.profile-data li {
+    margin-bottom: 0.4rem;
+}
+
 
 /* FOOTER */ 
 .footer .box-container {
@@ -607,6 +612,15 @@ header .icons #menu-bars {
 
 /* MEDIA QUERIES */
 @media (min-width: 1400px) {
+    #user-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .bills {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
     .static-reviews {
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -636,19 +650,23 @@ header .icons #menu-bars {
         padding: 2rem;
     }
 }
-@media (min-width: 768px) {
+@media (max-width: 1440px) {
     .bills {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
-}
-@media (min-width: 1024px) {
-    .bills {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+    #user-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media (max-width: 768px) {
+    #user-draw {
+        width: 300px;
+    }
     header .icons #menu-bars {
         display: inline-block;
     }
