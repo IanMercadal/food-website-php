@@ -16,7 +16,7 @@
         <!-- custom css file link  -->
         <link rel="stylesheet" href="../css/style.css">
 
-        <link rel="icon" type="image/x-icon" href="../images/">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
     </head>
     <body>
@@ -35,7 +35,7 @@
 
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
+            <!-- <i class="fas fa-search" id="search-icon"></i> -->
             <a href="#" class="fas fa-heart"></a>
             <a href="login.php" class="fas fa-solid fa-user"></a>
         </div>

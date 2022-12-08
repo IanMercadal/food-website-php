@@ -1,12 +1,12 @@
 <?php
 require "./conexion.php";
 
-function getDishes($limite) {
+function getDishes($limite, $filtro = "all") {
     global $db;
     if ($limite === 0) {
         $query = "select * from dishes";
     } else {
-        $query = "select * from dishes limit $limite";
+        $query = "select * from dishes order by $filtro desc limit $limite";
     }
     
     $resultado = mysqli_query($db,$query);
@@ -15,7 +15,7 @@ function getDishes($limite) {
     while ($row = $resultado->fetch_assoc()) {
         $dishes .= 
         '<div class="box">
-            <a href="#" class="fas fa-heart"></a>
+            <form action="#" method="post"><button value="'.$row["nombre"].'" class="fas fa-heart"></button></form>
             <a href="#" class="fas fa-eye"></a>
             <img src="images/'.$row["foto"].'" alt="">
             <h3>'.$row["nombre"].'</h3>

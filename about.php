@@ -1,8 +1,7 @@
 <?php include './includes/header.php' ?>
-
-    <div style="margin-top: 10px"></div>
     <!-- about section starts -->
     <section class="about" id="about">
+        <div style="margin-top: 50px"></div>
         <h3 class="sub-heading">about us</h3>
         <h1 class="heading">why choose us?</h1>
 

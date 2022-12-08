@@ -57,7 +57,7 @@ include_once './includes/header.php';
         <h1 class="heading">popular dishes</h1>
 
         <div class="box-container">
-            <?php echo getDishes(4) ?>
+            <?php echo getDishes(4,"votos") ?>
         </div>
     </section>
     <!-- dishes section ends -->

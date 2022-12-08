@@ -1,9 +1,7 @@
 <?php include_once './includes/header.php' ?>
-
-    <div style="margin-top: 10px"></div>
     <!-- review section starts -->
     <section class="review" id="review">
-
+        <div style="margin-top: 50px"></div>
         <h3 class="sub-heading"> customer's review </h3>
         <h1 class="heading"> what they say </h1>
     

@@ -1,8 +1,7 @@
 <?php include_once './includes/header.php' ?>
-
-    <div style="margin-top: 10px"></div>
     <!-- menu section starts -->
     <section class="menu" id="menu">
+        <div style="margin-top: 50px"></div>
         <h3 class="sub-heading">our menu</h3>
         <h1 class="heading">today's speciality</h1>
 
