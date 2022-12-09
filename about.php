@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="image">
-                <img src="images/about-img.png" alt="">
+                <img src="assets/images/about-img.png" alt="">
             </div>
             <div class="content">
                 <h3>best food in the country</h3>

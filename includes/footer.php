@@ -44,7 +44,7 @@
 
     <!-- loader part -->
     <div class="loader-container">
-        <img src="images/loader.gif" alt="">
+        <img src="assets/images/loader.gif" alt="">
     </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>

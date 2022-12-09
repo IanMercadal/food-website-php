@@ -16,7 +16,7 @@ function getMenu($limite) {
         $menu .= 
         '<div class="box">
             <div class="image">
-                <img src="images/'.$row["foto"].'" alt="">
+                <img src="assets/images/menu/'.$row["foto"].'" alt="">
             </div>
             <div class="content">
                 <div class="stars">

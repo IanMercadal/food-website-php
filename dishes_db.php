@@ -19,7 +19,7 @@ function getDishes($limite, $filtro = "all") {
                 <button class="fas fa-heart"><input type="hidden" name="dish" value="'.$row["id_dishes"].'"></input></button>
             </form>
             <a href="#" class="fas fa-eye"></a>
-            <img src="images/'.$row["foto"].'" alt="">
+            <img src="assets/images/dishes/'.$row["foto"].'" alt="">
             <h3>'.$row["nombre"].'</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>

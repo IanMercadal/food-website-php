@@ -10,7 +10,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-1.png" alt="">
+                    <img src="assets/images/pic-1.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -28,7 +28,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-2.png" alt="">
+                    <img src="assets/images/pic-2.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -46,7 +46,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-3.png" alt="">
+                    <img src="assets/images/pic-3.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -64,7 +64,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-4.png" alt="">
+                    <img src="assets/images/pic-4.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -82,7 +82,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-1.png" alt="">
+                    <img src="assets/images/pic-1.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -100,7 +100,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-2.png" alt="">
+                    <img src="assets/images/pic-2.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -118,7 +118,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-3.png" alt="">
+                    <img src="assets/images/pic-3.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">
@@ -136,7 +136,7 @@
             <div class="slide">
                 <i class="fas fa-quote-right"></i>
                 <div class="user">
-                    <img src="images/pic-4.png" alt="">
+                    <img src="assets/images/pic-4.png" alt="">
                     <div class="user-info">
                         <h3>john deo</h3>
                         <div class="stars">

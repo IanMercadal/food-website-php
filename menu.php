@@ -6,7 +6,7 @@ include_once './includes/header.php'
     <section class="menu" id="menu">
         <div style="margin-top: 50px"></div>
         <h3 class="sub-heading">our menu</h3>
-        <h1 class="heading">today's speciality</h1>
+        <h1 class="heading">all speciality</h1>
 
         <div class="box-container">
             <?php echo getMenu(0) ?>

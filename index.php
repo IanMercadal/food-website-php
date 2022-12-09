@@ -18,7 +18,7 @@ include_once './includes/header.php';
                         <a href="#" class="btn">order now</a>
                     </div>
                     <div class="image">
-                        <img src="images/home-img-1.png" alt="">
+                        <img src="assets/images/home-img-1.png" alt="">
                     </div>
                 </div>
     
@@ -31,7 +31,7 @@ include_once './includes/header.php';
                         <a href="#" class="btn">order now</a>
                     </div>
                     <div class="image">
-                        <img src="images/home-img-2.png" alt="">
+                        <img src="assets/images/home-img-2.png" alt="">
                     </div>
                 </div>
     
@@ -44,7 +44,7 @@ include_once './includes/header.php';
                         <a href="#" class="btn">order now</a>
                     </div>
                     <div class="image">
-                        <img src="images/home-img-3.png" alt="">
+                        <img src="assets/images/home-img-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@ include_once './includes/header.php';
 
         <div class="row">
             <div class="image">
-                <img src="images/about-img.png" alt="">
+                <img src="assets/images/about-img.png" alt="">
             </div>
             <div class="content">
                 <h3>best food in the country</h3>
@@ -127,7 +127,7 @@ include_once './includes/header.php';
                 <div class="swiper-slide slide">
                     <i class="fas fa-quote-right"></i>
                     <div class="user">
-                        <img src="images/pic-1.png" alt="">
+                        <img src="assets/images/pic-1.png" alt="">
                         <div class="user-info">
                             <h3>john deo</h3>
                             <div class="stars">
@@ -145,7 +145,7 @@ include_once './includes/header.php';
                 <div class="swiper-slide slide">
                     <i class="fas fa-quote-right"></i>
                     <div class="user">
-                        <img src="images/pic-2.png" alt="">
+                        <img src="assets/images/pic-2.png" alt="">
                         <div class="user-info">
                             <h3>john deo</h3>
                             <div class="stars">
@@ -163,7 +163,7 @@ include_once './includes/header.php';
                 <div class="swiper-slide slide">
                     <i class="fas fa-quote-right"></i>
                     <div class="user">
-                        <img src="images/pic-3.png" alt="">
+                        <img src="assets/images/pic-3.png" alt="">
                         <div class="user-info">
                             <h3>john deo</h3>
                             <div class="stars">
@@ -181,7 +181,7 @@ include_once './includes/header.php';
                 <div class="swiper-slide slide">
                     <i class="fas fa-quote-right"></i>
                     <div class="user">
-                        <img src="images/pic-4.png" alt="">
+                        <img src="assets/images/pic-4.png" alt="">
                         <div class="user-info">
                             <h3>john deo</h3>
                             <div class="stars">
