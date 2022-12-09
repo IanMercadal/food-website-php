@@ -1,9 +1,7 @@
 <?php 
 
 if(isset($_POST)) {
-
     require "./conexion.php";
-    session_start();
     $_SESSION['errores'] = [];
 
     // Array de errores

@@ -1,5 +1,7 @@
 <?php 
 require './dishes_db.php';
+require './menu_db.php';
+require './form_db.php';
 include_once './includes/header.php';
 ?>
 
@@ -107,186 +109,7 @@ include_once './includes/header.php';
         <h1 class="heading">today's speciality</h1>
 
         <div class="box-container">
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-1.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-2.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-3.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-4.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-5.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-6.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-7.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-8.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/menu-9.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicuis food</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad recusandae cumque, 
-                        omnis sequi magni animi ut perspiciatis hic dolore accusamus ipsam id?</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
+            <?php echo getMenu(4) ?>
         </div>
     </section>
     <!-- menu section ends -->
@@ -381,56 +204,12 @@ include_once './includes/header.php';
     <!-- review section ends -->
 
     <!-- order section starts -->
+
     <section class="order" id="order">
         <h3 class="sub-heading">order now</h3>
         <h1 class="heading">free and fast</h1>
 
-        <form action="">
-
-            <div class="inputBox">
-                <div class="input">
-                    <span>your name</span>
-                    <input type="text" placeholder="enter your name">
-                </div>
-                <div class="input">
-                    <span>your number</span>
-                    <input type="number" placeholder="enter your number">
-                </div>
-            </div>
-            <div class="inputBox">
-                <div class="input">
-                    <span>your order</span>
-                    <input type="text" placeholder="enter food name">
-                </div>
-                <div class="input">
-                    <span>additional food</span>
-                    <input type="test" placeholder="extra with food">
-                </div>
-            </div>
-            <div class="inputBox">
-                <div class="input">
-                    <span>how much</span>
-                    <input type="number" placeholder="how many orders">
-                </div>
-                <div class="input">
-                    <span>date and time</span>
-                    <input type="datetime-local">
-                </div>
-            </div>
-            <div class="inputBox">
-                <div class="input">
-                    <span>your address</span>
-                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="input">
-                    <span>your message</span>
-                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-    
-            <input type="submit" value="order now" class="btn">
-    
-        </form>
+        <?php echo getForm() ?>
     
     </section>
     <!-- order section ends -->

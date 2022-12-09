@@ -8,6 +8,12 @@ include_once './includes/header.php'
         <h3 class="sub-heading">our dishes</h3>
         <h1 class="heading">all dishes</h1>
 
+        <?php 
+            if(isset($_POST) && !empty($_POST)) {
+                wantedDish();
+            }
+        ?>
+
         <div class="box-container">
             <?php echo getDishes(0) ?>
         </div>
