@@ -25,19 +25,19 @@
     <header>
         <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a>
         <nav class="navbar">
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/index.php") { ?> class="active"<?php } ?> id="home-nav" href="index.php">home</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/dishes.php") { ?> class="active"<?php } ?> href="dishes.php" id="dishes-nav">dishes</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/about.php") { ?> class="active"<?php } ?> href="about.php" id="about-nav">about</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/menu.php") { ?> class="active"<?php } ?> href="menu.php" id="menu-nav">menu</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/review.php") { ?> class="active"<?php } ?> href="review.php" id="review-nav">review</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']!=="/index.php") { ?> href="index.php"<?php } ?> href="#order" id="order-nav">order</a>
+            <a <?php if($_SERVER['SCRIPT_NAME']=="/") { ?> class="active"<?php } ?> id="home-nav" href="/">home</a>
+            <a <?php if($_SERVER['SCRIPT_NAME']=="/dishes") { ?> class="active"<?php } ?> href="/dishes" id="dishes-nav">dishes</a>
+            <a <?php if($_SERVER['SCRIPT_NAME']=="/about") { ?> class="active"<?php } ?> href="/about" id="about-nav">about</a>
+            <a <?php if($_SERVER['SCRIPT_NAME']=="/menu") { ?> class="active"<?php } ?> href="/menu" id="menu-nav">menu</a>
+            <a <?php if($_SERVER['SCRIPT_NAME']=="/review") { ?> class="active"<?php } ?> href="/review" id="review-nav">review</a>
+            <a <?php if($_SERVER['SCRIPT_NAME']!=="/") { ?> href="/"<?php } ?> href="#order" id="order-nav">order</a>
         </nav>
 
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <!-- <i class="fas fa-search" id="search-icon"></i> -->
-            <a <?php session_start(); if(isset($_SESSION['usuario'])) { ?> href="wishlist.php"<?php } ?> href="login.php" class="fas fa-heart"></a>
-            <a <?php if(isset($_SESSION['usuario'])) { ?> href="user.php"<?php } ?> href="login.php" class="fas fa-solid fa-user"></a>
+            <a <?php session_start(); if(isset($_SESSION['usuario'])) { ?> href="/wishlist"<?php } ?> href="/login" class="fas fa-heart"></a>
+            <a <?php if(isset($_SESSION['usuario'])) { ?> href="/user"<?php } ?> href="/login" class="fas fa-solid fa-user"></a>
         </div>
     </header>
 

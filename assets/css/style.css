@@ -510,18 +510,27 @@ header .icons #menu-bars {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    font-size: 2.5rem;
+}
+.bills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     font-size: 2.5rem;
 }
 .bill {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 1.7rem;
     margin-bottom: 1rem;
     gap: 0.4rem;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
+    height: 40px;
 }
 .bill-message {
     width: 300px; 
@@ -616,11 +625,6 @@ header .icons #menu-bars {
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
-    .bills {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
-    }
     .static-reviews {
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -651,11 +655,7 @@ header .icons #menu-bars {
     }
 }
 @media (max-width: 1440px) {
-    .bills {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+
     #user-container {
         display: flex;
         flex-direction: column;
@@ -696,13 +696,7 @@ header .icons #menu-bars {
     .home .home-slider .slide .content h3 {
         font-size: 5rem;
     }
-    .bills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-    }
+
 }
 @media (max-width: 450px) {
     html {

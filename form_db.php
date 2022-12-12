@@ -64,8 +64,6 @@ if(isset($_POST) && !empty($_POST)) {
     // Array de errores
     $errores = array();
 
-    var_dump($_POST);
-
     $id_user = $_POST['id_user'];
     $id_dishes = $_POST['id_dishes'];
     $calle = $_POST['calle'];
@@ -77,5 +75,6 @@ if(isset($_POST) && !empty($_POST)) {
     $resultado = mysqli_query($db,$query);
     var_dump($resultado);
     unset($_POST);
+    // Retornar página de éxito
 }
 ?>

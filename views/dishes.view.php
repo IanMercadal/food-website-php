@@ -1,6 +1,6 @@
 <?php
+include_once './includes/header.php';
 require './dishes_db.php'; 
-include_once './includes/header.php' 
 ?>
     <!-- menu section starts -->
     <section class="dishes" id="dishes">

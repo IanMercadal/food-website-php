@@ -1,8 +1,7 @@
 <?php
-require "./conexion.php";
 
 function getDishes($limite, $filtro = "all") {
-    global $db;
+    require "conexion.php";
     if ($limite === 0) {
         $query = "select * from dishes";
     } else {
@@ -36,7 +35,7 @@ function getDishes($limite, $filtro = "all") {
 }
 // Refactorizar el if que comprueba el usuario sessions
 function wantedDish() {
-    global $db;
+    require "conexion.php";
     if(isset($_SESSION["usuario"])) {
         $id_user = $_SESSION["usuario"]["id_user"];
         $plato = $_POST["dish"];
@@ -62,7 +61,7 @@ function wantedDish() {
     }
 }
 function getUserDishes() {
-    global $db;
+    require "conexion.php";
     if(isset($_SESSION["usuario"])) {
         $id_user = $_SESSION["usuario"]["id_user"];
         $query = "select * from wishlist where id_user = $id_user";

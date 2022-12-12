@@ -33,9 +33,8 @@ if(isset($_POST)) {
         }
 
         if(empty($errores)) {
-            
             $_SESSION["usuario"] = $usuario;
-            header("Location: user.php");
+            header("Location: /user");
         } else {
             $_SESSION['errores'] = $errores;
             header("Location: login.php");
