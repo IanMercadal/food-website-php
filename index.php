@@ -1,8 +1,8 @@
 <?php 
+include_once './includes/header.php';
 require './dishes_db.php';
 require './menu_db.php';
 require './form_db.php';
-include_once './includes/header.php';
 ?>
 
     <!-- home section starts -->

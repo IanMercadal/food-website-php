@@ -1,14 +1,5 @@
 <?php
 
-if(isset($_POST)) {
-    require "./conexion.php";
-    $_SESSION['errores'] = [];
-
-    // Array de errores
-    $errores = array();
-}
-
-
 function getForm() {
     $resultado = "";
     if(!isset($_SESSION["usuario"]["nombre"])) {
@@ -22,49 +13,69 @@ function getForm() {
         </div>
         ';
     } else {
+        // <input type="text" placeholder="enter food name">
         return $resultado .= '
         <form action="form_db.php" method="POST">
-            <div class="inputBox">
-                <div class="input">
-                    <span>your name</span>
-                    <input disabled="disabled" type="text" placeholder="enter your name" value="'.$_SESSION["usuario"]["nombre"]. " " .$_SESSION["usuario"]["apellido"].'">
-                </div>
-                <div class="input">
-                    <span>your number</span>
-                    <input disabled="disabled" type="number" placeholder="enter your number" value="'.$_SESSION["usuario"]["telefono"].'">
-                </div>
-            </div>
+            <input name="id_user" type="hidden" value="'.$_SESSION["usuario"]["id_user"].'">
+
             <div class="inputBox">
                 <div class="input">
                     <span>your order</span>
-                    <input type="text" placeholder="enter food name">
+                    <select name="id_dishes">
+                        <option select>-- Select --</option>
+                        <option value="1">Value 1</option>
+                        <option value="2">Value 2</option>
+                        <option value="3">Value 3</option>
+                    </select>
                 </div>
 
                 <div class="input">
                     <span>your address</span>
-                    <input name="" placeholder="enter your address" id="" cols="30" rows="10"></input>
+                    <input name="calle" placeholder="enter your address" id="" cols="30" rows="10"></input>
                 </div>
 
             </div>
             <div class="inputBox">
                 <div class="input">
                     <span>how much</span>
-                    <input type="number" placeholder="how many orders">
+                    <input name="cantidad" type="number" placeholder="how many orders">
                 </div>
                 <div class="input">
                     <span>date and time</span>
-                    <input type="datetime-local">
+                    <input name="fecha_hora" type="datetime-local">
                 </div>
             </div>
             <div class="inputBox">
 
                 <div class="input">
                     <span>your message</span>
-                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                    <textarea name="mensaje" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
                 </div>
             </div>
             <input type="submit" value="order now" class="btn">
         </form>';
     }
+}
+
+if(isset($_POST) && !empty($_POST)) {
+    require "./conexion.php";
+    $_SESSION['errores'] = [];
+
+    // Array de errores
+    $errores = array();
+
+    var_dump($_POST);
+
+    $id_user = $_POST['id_user'];
+    $id_dishes = $_POST['id_dishes'];
+    $calle = $_POST['calle'];
+    $cantidad = $_POST['cantidad'];
+    $fecha_hora = $_POST['fecha_hora'];
+    $mensaje = $_POST['mensaje'];
+
+    $query = "insert into orders(id_user,id_dishes,fecha_hora,cantidad,mensaje,calle) values ($id_user,$id_dishes,'$fecha_hora',$cantidad,'$mensaje','$calle')";
+    $resultado = mysqli_query($db,$query);
+    var_dump($resultado);
+    unset($_POST);
 }
 ?>

@@ -1,4 +1,7 @@
-<?php include_once './includes/header.php'; ?>
+<?php 
+include_once './includes/header.php'; 
+require './orders_db.php';
+?>
 
     <div style="margin-top: 50px"></div>
     <!-- review section starts -->
@@ -22,30 +25,7 @@
             <h1 class="heading"> your bills </h1>
             
             <div class="bills">
-                <div class="bill">
-                    <img class="bill-image" src="./assets/images/menu-1.jpg">
-                    <ul>
-                        <li><b>ID:</b> 1</li> <li><b>Fecha:</b> 07/12/2022</li> <li><b>Food:</b> x2 Tasty Food</li> <li><b>Price:</b> $29.99</li> <li class="bill-message"><b>Message:</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias perspiciatis, molestiae quibusdam ipsum voluptatibus rerum alias.</li>
-                    </ul>
-                </div>
-                <div class="bill">
-                    <img class="bill-image" src="./assets/images/menu-1.jpg">
-                    <ul>
-                        <li><b>ID:</b> 1</li> <li><b>Fecha:</b> 07/12/2022</li> <li><b>Food:</b> x2 Tasty Food</li> <li><b>Price:</b> $29.99</li> <li class="bill-message"><b>Message:</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias perspiciatis, molestiae quibusdam ipsum voluptatibus rerum alias.</li>
-                    </ul>
-                </div>
-                <div class="bill">
-                    <img class="bill-image" src="./assets/images/menu-1.jpg">
-                    <ul>
-                        <li><b>ID:</b> 1</li> <li><b>Fecha:</b> 07/12/2022</li> <li><b>Food:</b> x2 Tasty Food</li> <li><b>Price:</b> $29.99</li> <li class="bill-message"><b>Message:</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias perspiciatis, molestiae quibusdam ipsum voluptatibus rerum alias.</li>
-                    </ul>
-                </div>
-                <div class="bill">
-                    <img class="bill-image" src="./assets/images/menu-1.jpg">
-                    <ul>
-                        <li><b>ID:</b> 1</li> <li><b>Fecha:</b> 07/12/2022</li> <li><b>Food:</b> x2 Tasty Food</li> <li><b>Price:</b> $29.99</li> <li class="bill-message"><b>Message:</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias perspiciatis, molestiae quibusdam ipsum voluptatibus rerum alias.</li>
-                    </ul>
-                </div>
+                <?php echo get_pedidos(); ?>
             </div>
 
             <div class="btn-group">

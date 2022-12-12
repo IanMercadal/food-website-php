@@ -36,8 +36,8 @@
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <!-- <i class="fas fa-search" id="search-icon"></i> -->
-            <a href="#" class="fas fa-heart"></a>
-            <a <?php session_start(); if(isset($_SESSION['usuario'])) { ?> href="user.php"<?php } ?> href="login.php" class="fas fa-solid fa-user"></a>
+            <a <?php session_start(); if(isset($_SESSION['usuario'])) { ?> href="wishlist.php"<?php } ?> href="login.php" class="fas fa-heart"></a>
+            <a <?php if(isset($_SESSION['usuario'])) { ?> href="user.php"<?php } ?> href="login.php" class="fas fa-solid fa-user"></a>
         </div>
     </header>
 

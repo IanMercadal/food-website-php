@@ -476,7 +476,7 @@ header .icons #menu-bars {
 }
 
 .order form .inputBox .input input,
-.order form .inputBox .input textarea {
+.order form .inputBox .input textarea, select {
     background:#eee;
     border-radius: .5rem;
     padding:1rem;
