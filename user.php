@@ -56,10 +56,7 @@
             </div>
         </div>
 
-
     </section>
     <!-- review section ends -->
-
-
 
 <?php include_once './includes/footer.php' ?>

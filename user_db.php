@@ -1,6 +1,7 @@
 <?php 
 
 if(isset($_POST)) {
+    session_start();
     require "./conexion.php";
     $_SESSION['errores'] = [];
 
@@ -32,6 +33,7 @@ if(isset($_POST)) {
         }
 
         if(empty($errores)) {
+            
             $_SESSION["usuario"] = $usuario;
             header("Location: user.php");
         } else {

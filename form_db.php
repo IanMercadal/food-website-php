@@ -1,4 +1,14 @@
 <?php
+
+if(isset($_POST)) {
+    require "./conexion.php";
+    $_SESSION['errores'] = [];
+
+    // Array de errores
+    $errores = array();
+}
+
+
 function getForm() {
     $resultado = "";
     if(!isset($_SESSION["usuario"]["nombre"])) {
@@ -13,7 +23,7 @@ function getForm() {
         ';
     } else {
         return $resultado .= '
-        <form action="">
+        <form action="form_db.php" method="POST">
             <div class="inputBox">
                 <div class="input">
                     <span>your name</span>
@@ -29,10 +39,12 @@ function getForm() {
                     <span>your order</span>
                     <input type="text" placeholder="enter food name">
                 </div>
+
                 <div class="input">
-                    <span>additional food</span>
-                    <input type="test" placeholder="extra with food">
+                    <span>your address</span>
+                    <input name="" placeholder="enter your address" id="" cols="30" rows="10"></input>
                 </div>
+
             </div>
             <div class="inputBox">
                 <div class="input">
@@ -45,10 +57,7 @@ function getForm() {
                 </div>
             </div>
             <div class="inputBox">
-                <div class="input">
-                    <span>your address</span>
-                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
-                </div>
+
                 <div class="input">
                     <span>your message</span>
                     <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>

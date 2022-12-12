@@ -34,6 +34,7 @@ function getDishes($limite, $filtro = "all") {
     }
     return $dishes;
 }
+// Refactorizar el if que comprueba el usuario sessions
 function wantedDish() {
     global $db;
     if(isset($_SESSION["usuario"])) {
@@ -56,6 +57,42 @@ function wantedDish() {
                 echo "El plato ya está en la wishlist";
             }
         }
+    } else {
+        header("Location: login.php"); 
+    }
+}
+function getUserDishes() {
+    global $db;
+    if(isset($_SESSION["usuario"])) {
+        $id_user = $_SESSION["usuario"]["id_user"];
+        $query = "select * from wishlist where id_user = $id_user";
+        $resultado = mysqli_query($db,$query);
+        $dishes = "";
+        while ($row = $resultado->fetch_assoc()) {
+            $id_plato = $row["id_dishes"];
+            $obtener_plato = "select * from dishes where id_dishes = $id_plato";
+            $resultado_platos = mysqli_query($db,$obtener_plato);
+            $resultado_plato = $resultado_platos->fetch_assoc();
+            $dishes .= 
+            '<div class="box">
+                <form action="#" method="post">
+                    <button class="fas fa-heart"><input type="hidden" name="dish" value="'.$resultado_plato["id_dishes"].'"></input></button>
+                </form>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="assets/images/dishes/'.$resultado_plato["foto"].'" alt="">
+                <h3>'.$resultado_plato["nombre"].'</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>'.$resultado_plato["precio"].'€</span>
+                <a href="#" class="btn">add to cart</a>
+            </div>';
+        }
+        return $dishes;
     } else {
         header("Location: login.php"); 
     }
