@@ -57,7 +57,7 @@ function wantedDish() {
             }
         }
     } else {
-        header("Location: login.php"); 
+        header("Location: /login"); 
     }
 }
 function getUserDishes() {
@@ -93,7 +93,7 @@ function getUserDishes() {
         }
         return $dishes;
     } else {
-        header("Location: login.php"); 
+        header("Location: /login"); 
     }
 }
 

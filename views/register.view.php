@@ -1,25 +1,30 @@
 <?php include_once './includes/header.php' ?>
-
-    <div style="margin-top: 10px"></div>
+    <div style="margin-top: 50px"></div>
     <!-- order section starts -->
     <section class="order" id="order">
         <h3 class="sub-heading">Register</h3>
         <h1 class="heading">Register</h1>
 
-        <form action="">
+        <form action="register_db.php" method="post">
 
             <div class="inputBox">
                 <div class="input">
-                    <span>your name and surname</span>
-                    <input type="text" name="name" placeholder="enter your name">
+                    <span>your name</span>
+                    <input type="text" name="nombre" placeholder="enter your name">
                 </div>
                 <div class="input">
-                    <span>your email</span>
-                    <input type="text" name="email" placeholder="enter your email">
+                    <span>your surname</span>
+                    <input type="text" name="apellido" placeholder="enter your surname">
                 </div>
+
                 <div class="input">
                     <span>your phone</span>
-                    <input type="number" name="phone" placeholder="enter your phone">
+                    <input type="number" name="telefono" placeholder="enter your phone">
+                </div>
+
+                <div class="input">
+                    <span>your email</span>
+                    <input type="text" name="correo" placeholder="enter your email">
                 </div>
             </div>
 

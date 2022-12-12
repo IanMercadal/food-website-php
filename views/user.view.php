@@ -16,7 +16,6 @@ require './orders_db.php';
                 <li><b>Correo:</b><?php echo $_SESSION["usuario"]["correo"] ?> </li>
                 <li><b>Teléfono:</b> <?php echo $_SESSION["usuario"]["telefono"] ?> </li>
                 <li><b>Fecha de inscripción:</b> <?php echo $_SESSION["usuario"]["fecha_inscripcion"] ?> </li>
-                <li><b>Total pedidos:</b> 8 </li>
             </ul>
         </div>
 

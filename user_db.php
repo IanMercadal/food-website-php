@@ -37,13 +37,13 @@ if(isset($_POST)) {
             header("Location: /user");
         } else {
             $_SESSION['errores'] = $errores;
-            header("Location: login.php");
+            header("Location: /login");
         }
         
     } else {
         $errores["vacios"] = "El email o la contraseña están vacíos";
         $_SESSION['errores'] = $errores;
-        header("Location: login.php");
+        header("Location: /login");
     }
 } 
 

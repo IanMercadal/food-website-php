@@ -13,7 +13,7 @@
                     <span>your email</span>
                     <input type="text" name="email" placeholder="enter your email">
 
-                    <a href="register.php">¿Need an account?</a>
+                    <a href="/register">¿Need an account?</a>
                 </div>
             </div>
 
