@@ -27,7 +27,14 @@ if(isset($_POST)) {
         $apellido_validado = true;
     } else {
         $apellido_validado = false;
-        $errores['apellido'] = "Los apellido no son válido";
+        $errores['apellido'] = "El apellido no es válido";
+    }
+
+    if(!empty($telefono) && preg_match('/^[0-9]{9}+$/', $telefono)) {
+        $telefono_validado = true;
+    } else {
+        $telefono_validado = false;
+        $errores['telefono'] = "El teléfono no es válido";
     }
 
     if(!empty($correo) && filter_var($correo, FILTER_VALIDATE_EMAIL)) {
@@ -49,7 +56,7 @@ if(isset($_POST)) {
     if(count($errores) == 0) {
         $guardar_usuario = true;
         $password_segura = password_hash($password,PASSWORD_BCRYPT,['cost' => 4]);
-        $sql = "INSERT INTO users(nombre,apellido,telefono,correo,password,fecha_inscripcion) VALUES ('$nombre','$apellido','$telefono','$correo','$password','12/12/2022')";
+        $sql = "INSERT INTO users(nombre,apellido,telefono,correo,password,fecha_inscripcion) VALUES ('$nombre','$apellido','$telefono','$correo','$password_segura','12/12/2022')";
         $guardar = mysqli_query($db, $sql);
         
         var_dump($sql);
@@ -62,7 +69,7 @@ if(isset($_POST)) {
         }
     } else {
         $_SESSION['errores'] = $errores;
-        var_dump($_SESSION['errores']);
+        header("Location: /register");
     }
 } 
 

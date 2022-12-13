@@ -28,7 +28,7 @@ if(isset($_POST)) {
         $resultado = mysqli_query($db,$query);
         $password_db = $resultado->fetch_assoc();
 
-        if($password_db["password"] !== $password) {
+        if(!password_verify($password, $password_db["password"])) {
             $errores["password"] = "La contraseña no coincide";
         }
 
