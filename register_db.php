@@ -38,7 +38,17 @@ if(isset($_POST)) {
     }
 
     if(!empty($correo) && filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-        $correo_validado = true;
+
+        $query = "SELECT * from users WHERE correo = '$correo'";
+        $resultado = mysqli_query($db,$query);
+        $correo_existente = $resultado->fetch_assoc();
+        if($correo_existente) {
+            $correo_validado = false;
+            $errores['correo'] = "El correo " . $correo_existente["correo"] ." ya existe";
+        } else {
+            $correo_validado = true;
+        }
+        
     } else {
         $correo_validado = false;
         $errores['correo'] = "El correo no es válido";
