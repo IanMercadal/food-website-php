@@ -28,6 +28,9 @@ ul {
     color: rgb(252, 53, 53);
     font-size: 1.2rem;
 }
+.no-orders {
+    font-size: 1.2rem;
+}
 
 /* HEADER */
 header {
