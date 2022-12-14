@@ -23,17 +23,12 @@ require './orders_db.php';
             <h3 class="sub-heading"> your bills </h3>
             <h1 class="heading"> List </h1>
             
-            <div class="bills">
-                <?php 
-                    echo get_pedidos(); 
-                ?>
-            </div>
+            <?php echo get_pedidos(); ?>
+            
+            <!-- <div class="bills"></div> -->
 
             <!-- <div class="btn-group">
                 <button class="btn btn-primary">1</button>
-                <button class="btn btn-primary">2</button>
-                <button class="btn btn-primary">3</button>
-                <button class="btn btn-primary">4</button>
             </div> -->
         </div>
 

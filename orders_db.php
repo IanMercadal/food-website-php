@@ -4,11 +4,13 @@ require './functions.php';
 function get_pedidos() {
     require "conexion.php";
     $id_user = $_SESSION["usuario"]["id_user"];
-
+    
     // Obtenemos pedidos
     $query = "SELECT * from orders WHERE id_user = $id_user";
     $resultado = mysqli_query($db,$query);
+
     $pedidos = "";
+    $pedidos = '<div class="bills">';
     if($resultado->num_rows > 0 ) {
         while ($row = $resultado->fetch_assoc()) {
 
@@ -31,7 +33,7 @@ function get_pedidos() {
             <h3>No orders</h3>
         ';
     }
-
+    $pedidos .= '</div>';
     return $pedidos;
 };
 

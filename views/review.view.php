@@ -152,6 +152,25 @@
             </div>
     
         </div>
+    </section>
+
+    <section class="order" id="order">
+        <h3 class="sub-heading">order now</h3>
+        <h1 class="heading">free and fast</h1>
+
+        <form action="review_db.php" method="post">
+            <div class="inputBox">
+                <div class="input">
+                    <span>Qualification</span>
+                    <input required name="valoracion" min="1" max="5" type="number" placeholder="Rating">
+                </div>
+                <div class="input">
+                    <span>your message</span>
+                    <textarea required name="descripcion" placeholder="enter your description" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <input type="submit" value="Submit" class="btn">
+        </form>
         
     </section>
     <!-- review section ends -->
