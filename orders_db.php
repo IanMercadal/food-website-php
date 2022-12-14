@@ -1,4 +1,5 @@
 <?php 
+require './functions.php';
 
 function get_pedidos() {
     require "conexion.php";
@@ -10,13 +11,16 @@ function get_pedidos() {
     $pedidos = "";
     if($resultado->num_rows > 0 ) {
         while ($row = $resultado->fetch_assoc()) {
+
             $pedidos .= '
                 <div class="bill">
-                    <p style="margin-left: 10px"><b>ID:</b>'.$row["id_orders"].'</p>
-                    <p><b>Fecha:</b> 07/12/2022 </p>
-                    <p><b>Food:</b> x'.$row["cantidad"].'</p>
-                    <p><b>Price:</b> $29.99</p>
-                    <div class="bill-message"><b>Message:</b> '.$row["mensaje"].'</div>
+                    <img style="width:100px" src="'. getFoodImage($row["id_dishes"]) .'">
+                    <div>
+                        <p><b>Fecha:</b>'.$row["fecha_hora"].'</p>
+                        <p><b>Food:</b> x'.$row["cantidad"].'</p>
+                        <p><b>Price:</b> $29.99</p>
+                        <div class="bill-message"><b>Message:</b> '.$row["mensaje"].'</div>
+                    </div>
                 </div>
             ';
         }

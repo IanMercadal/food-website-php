@@ -1,6 +1,7 @@
 <?php
 
 function getForm() {
+    require "conexion.php";
     $resultado = "";
     if(!isset($_SESSION["usuario"]["nombre"])) {
         return $resultado .= 
@@ -14,46 +15,55 @@ function getForm() {
         ';
     } else {
         // <input type="text" placeholder="enter food name">
-        return $resultado .= '
+        $query = "select * from dishes";
+        $resultado = mysqli_query($db,$query);
+        $formulario = "";
+        
+        $formulario .= '
         <form action="form_db.php" method="POST">
             <input name="id_user" type="hidden" value="'.$_SESSION["usuario"]["id_user"].'">
-
             <div class="inputBox">
                 <div class="input">
                     <span>your order</span>
-                    <select name="id_dishes">
-                        <option select>-- Select --</option>
-                        <option value="1">Value 1</option>
-                        <option value="2">Value 2</option>
-                        <option value="3">Value 3</option>
+                    <select required name="id_dishes">
+                        <option>-- Select --</option>
+        ';
+
+        while ($row = $resultado->fetch_assoc()) {
+            $formulario .= '<option  name="'.$row["id_dishes"].'" value="'.$row["id_dishes"].'">'.$row["nombre"].'</option>';
+        }
+
+        $formulario .= '
                     </select>
                 </div>
 
                 <div class="input">
                     <span>your address</span>
-                    <input name="calle" placeholder="enter your address" id="" cols="30" rows="10"></input>
+                    <input required name="calle" placeholder="enter your address" id="" cols="30" rows="10"></input>
                 </div>
 
             </div>
             <div class="inputBox">
                 <div class="input">
                     <span>how much</span>
-                    <input name="cantidad" type="number" placeholder="how many orders">
+                    <input required name="cantidad" type="number" placeholder="how many orders">
                 </div>
                 <div class="input">
                     <span>date and time</span>
-                    <input name="fecha_hora" type="datetime-local">
+                    <input required name="fecha_hora" type="datetime-local">
                 </div>
             </div>
             <div class="inputBox">
 
                 <div class="input">
-                    <span>your message</span>
+                    <span>your message (optional)</span>
                     <textarea name="mensaje" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
                 </div>
             </div>
             <input type="submit" value="order now" class="btn">
         </form>';
+
+        return $formulario;
     }
 }
 
@@ -64,17 +74,59 @@ if(isset($_POST) && !empty($_POST)) {
     // Array de errores
     $errores = array();
 
-    $id_user = $_POST['id_user'];
-    $id_dishes = $_POST['id_dishes'];
-    $calle = $_POST['calle'];
-    $cantidad = $_POST['cantidad'];
-    $fecha_hora = $_POST['fecha_hora'];
-    $mensaje = $_POST['mensaje'];
+    $id_user = isset($_POST['id_user']) ? $_POST['id_user'] : false;
+    $id_dishes = isset($_POST['id_dishes']) ? $_POST['id_dishes'] : false;
+    $calle = isset($_POST['calle']) ? $_POST['calle'] : false;
+    $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : false;
+    $fecha_hora = isset($_POST['fecha_hora']) ? $_POST['fecha_hora'] : false;
+    $mensaje = isset($_POST['mensaje']) ? $_POST['mensaje'] : false;
 
-    $query = "insert into orders(id_user,id_dishes,fecha_hora,cantidad,mensaje,calle) values ($id_user,$id_dishes,'$fecha_hora',$cantidad,'$mensaje','$calle')";
-    $resultado = mysqli_query($db,$query);
-    var_dump($resultado);
-    unset($_POST);
-    // Retornar página de éxito
+    if(!empty($id_user)) {
+        $id_user_validado = true;
+    } else {
+        $id_user_validado = false;
+        $errores['id_user'] = "El nombre no es válido";
+    }
+
+    if(!empty($id_dishes)) {
+        $id_dishes_validado = true;
+    } else {
+        $id_dishes_validado = false;
+        $errores['id_dishes'] = "El plato no es válido";
+    }
+
+    if(!empty($calle)) {
+        $calle_validado = true;
+    } else {
+        $calle_validado = false;
+        $errores['calle'] = "La calle no es válida";
+    }
+
+    if(!empty($cantidad)) {
+        $cantidad_validado = true;
+    } else {
+        $cantidad_validado = false;
+        $errores['cantidad'] = "La cantidad no es válida";
+    }
+
+    if(!empty($fecha_hora)) {
+        $fecha_hora_validado = true;
+    } else {
+        $fecha_hora_validado = false;
+        $errores['fecha_hora'] = "La fecha y hora no son válidas";
+    }
+
+    $_SESSION['errores'] = $errores;
+
+    if(count($errores) > 0) {
+        return;
+    } else {
+        $query = "insert into orders(id_user,id_dishes,fecha_hora,cantidad,mensaje,calle) values ($id_user,$id_dishes,'$fecha_hora',$cantidad,'$mensaje','$calle')";
+        $resultado = mysqli_query($db,$query);
+        if($resultado) {
+            header("Location: /exit");
+            unset($_POST);
+        }
+    }
 }
 ?>

@@ -537,7 +537,7 @@ header .icons #menu-bars {
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 100px;
 }
 .bill-message {
     width: 300px; 
@@ -565,6 +565,17 @@ header .icons #menu-bars {
     margin-bottom: 0.4rem;
 }
 
+/* REVIEWS */
+.static-reviews {
+    gap: 1rem;
+}
+/* EXIT */
+.box-container-exit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 /* FOOTER */ 
 .footer .box-container {
@@ -715,5 +726,8 @@ header .icons #menu-bars {
     }
     .order form .inputBox .input{
         width:100%;
+    }
+    .bill {
+        flex-direction: column;
     }
 }

@@ -12,6 +12,7 @@ $routes = [
     '/login' => './controllers/login.php',
     '/register' => './controllers/register.php',
     '/user' => './controllers/user.php',
+    '/exit' => './controllers/exit.php',
 ];
 
 function abort($code = 404) {

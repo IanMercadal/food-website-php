@@ -32,6 +32,16 @@ if(isset($_POST)) {
             $errores["password"] = "La contraseña no coincide";
         }
 
+        $token = hash('sha256', uniqid());
+        $sql = "UPDATE users set token = '$token' where correo = '$correo'";
+        $guardar = mysqli_query($db, $sql);
+
+        if($guardar) {
+            $usuario["token"] = $token;
+        } else {
+            $errores["token"] = "Error al autenticar";
+        }
+        
         if(empty($errores)) {
             $_SESSION["usuario"] = $usuario;
             header("Location: /user");

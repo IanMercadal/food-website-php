@@ -25,12 +25,12 @@
     <header>
         <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a>
         <nav class="navbar">
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/") { ?> class="active"<?php } ?> id="home-nav" href="/">home</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/dishes") { ?> class="active"<?php } ?> href="/dishes" id="dishes-nav">dishes</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/about") { ?> class="active"<?php } ?> href="/about" id="about-nav">about</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/menu") { ?> class="active"<?php } ?> href="/menu" id="menu-nav">menu</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']=="/review") { ?> class="active"<?php } ?> href="/review" id="review-nav">review</a>
-            <a <?php if($_SERVER['SCRIPT_NAME']!=="/") { ?> href="/"<?php } ?> href="#order" id="order-nav">order</a>
+            <a <?php if(strpos($_SERVER['REQUEST_URI'], '')) { ?> class="active"<?php } ?> id="home-nav" href="/">home</a>
+            <a <?php if(strpos($_SERVER['REQUEST_URI'], 'dishes')) { ?> class="active"<?php } ?> href="/dishes" id="dishes-nav">dishes</a>
+            <a <?php if(strpos($_SERVER['REQUEST_URI'], 'about')) { ?> class="active"<?php } ?> href="/about" id="about-nav">about</a>
+            <a <?php if(strpos($_SERVER['REQUEST_URI'], 'menu')) { ?> class="active"<?php } ?> href="/menu" id="menu-nav">menu</a>
+            <a <?php if(strpos($_SERVER['REQUEST_URI'], 'review')) { ?> class="active"<?php } ?> href="/review" id="review-nav">review</a>
+            <a <?php if(!strpos($_SERVER['REQUEST_URI'], '/')) { ?> href="/"<?php } ?> href="#order" id="order-nav">order</a>
         </nav>
 
         <div class="icons">
