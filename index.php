@@ -4,10 +4,6 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => './controllers/index.php',
-    '/dishes' => './controllers/dishes.php',
-    '/about' => './controllers/about.php',
-    '/menu' => './controllers/menu.php',
-    '/review' => './controllers/review.php',
     '/wishlist' => './controllers/wishlist.php',
     '/login' => './controllers/login.php',
     '/register' => './controllers/register.php',

@@ -24,8 +24,8 @@ html {
 ul {
     list-style:none;
 }
-.error {
-    color: rgb(252, 53, 53);
+span.error {
+    color: rgb(252, 53, 53) !important;
     font-size: 1.2rem;
 }
 .no-orders {

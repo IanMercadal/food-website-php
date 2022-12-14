@@ -59,7 +59,7 @@ require './form_db.php';
         <h1 class="heading">popular dishes</h1>
 
         <div class="box-container">
-            <?php echo getDishes(4,"votos") ?>
+            <?php echo getDishes(0,"votos") ?>
         </div>
     </section>
     <!-- dishes section ends -->
@@ -97,9 +97,6 @@ require './form_db.php';
                 <a href="#" class="btn">learn more</a>
             </div>
         </div>
-
-
-
     </section>
     <!-- about section ends -->
 
@@ -109,7 +106,7 @@ require './form_db.php';
         <h1 class="heading">today's speciality</h1>
 
         <div class="box-container">
-            <?php echo getMenu(4) ?>
+            <?php echo getMenu(0) ?>
         </div>
     </section>
     <!-- menu section ends -->

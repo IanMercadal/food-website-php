@@ -28,7 +28,6 @@
                 <div class="input">
                 <?php 
                     if(isset($_SESSION["errores"])) {
-                        var_dump($_SESSION["errores"]);
                         foreach($_SESSION["errores"] as $error) {
                             echo '<span class="error">'.$error.'</span>';
                         }
