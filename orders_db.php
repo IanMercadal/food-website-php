@@ -17,11 +17,11 @@ function get_pedidos() {
             $pedidos .= '
                 <div class="bill">
                     <img style="width:100px" src="'. getFoodImage($row["id_dishes"]) .'">
-                    <div>
-                        <p><b>Fecha:</b>'.$row["fecha_hora"].'</p>
-                        <p><b>Food:</b> x'.$row["cantidad"].'</p>
-                        <p><b>Price:</b> $29.99</p>
-                        <div class="bill-message"><b>Message:</b> '.$row["mensaje"].'</div>
+                    <div style="margin-right:1.2rem">
+                        <p><b>'.getFoodName($row["id_dishes"]).'</b></p>
+                        <p><b>Fecha: </b>'.corregirFecha($row["fecha_hora"]).'</p>
+                        <p><b>Orders: </b> x'.$row["cantidad"].'</p>
+                        <p><b>Price: </b>'.getFoodPrice($row["cantidad"],$row["id_dishes"]).'€</p>
                     </div>
                 </div>
             ';

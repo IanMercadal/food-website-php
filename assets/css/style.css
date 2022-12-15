@@ -520,13 +520,7 @@ header .icons #menu-bars {
     justify-content: flex-start;
     font-size: 2.5rem;
 }
-.bills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-}
+
 .bill {
     display: flex;
     flex-direction: row;
@@ -727,7 +721,21 @@ header .icons #menu-bars {
     .order form .inputBox .input{
         width:100%;
     }
-    .bill {
+
+}
+@media (min-width: 450px) {
+    .bills {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        font-size: 2.5rem; 
+    }
+}
+@media (max-width: 606px) {
+    .bills {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

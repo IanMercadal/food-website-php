@@ -1,7 +1,7 @@
 <?php include_once './includes/header.php' ?>
 
-    <div style="margin-top: 10px"></div>
     <!-- order section starts -->
+    <div style="margin-top: 50px"></div>
     <section class="order" id="order">
         <h3 class="sub-heading">Login</h3>
         <h1 class="heading">login</h1>

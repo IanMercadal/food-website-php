@@ -24,12 +24,12 @@ require './orders_db.php';
             <h1 class="heading"> List </h1>
             
             <?php echo get_pedidos(); ?>
-            
-            <!-- <div class="bills"></div> -->
 
-            <!-- <div class="btn-group">
-                <button class="btn btn-primary">1</button>
-            </div> -->
+            <!-- 
+                <div class="btn-group">
+                    <button class="btn btn-primary">1</button>
+                </div> 
+            -->
         </div>
 
     </section>

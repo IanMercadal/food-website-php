@@ -68,8 +68,7 @@ if(isset($_POST)) {
         $password_segura = password_hash($password,PASSWORD_BCRYPT,['cost' => 4]);
         $sql = "INSERT INTO users(nombre,apellido,telefono,correo,password,fecha_inscripcion) VALUES ('$nombre','$apellido','$telefono','$correo','$password_segura','12/12/2022')";
         $guardar = mysqli_query($db, $sql);
-        
-        var_dump($sql);
+
         // Mostrar página de éxito o error
         if($guardar) {
             $_SESSION['completado'] = "El registro se ha completado con éxito";

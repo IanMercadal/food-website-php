@@ -201,13 +201,11 @@ require './form_db.php';
     <!-- review section ends -->
 
     <!-- order section starts -->
-
     <section class="order" id="order">
         <h3 class="sub-heading">order now</h3>
         <h1 class="heading">free and fast</h1>
 
         <?php echo getForm() ?>
-    
     </section>
     <!-- order section ends -->
 
